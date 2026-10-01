@@ -1,1 +1,23 @@
 @import "tailwindcss";
+
+@theme {
+  /* Via del Grano — warm editorial */
+  --color-vg-bg: #f7f5f0;
+  --color-vg-surface: #fffcf7;
+  --color-vg-surface-muted: #efebe3;
+  --color-vg-border: #ded8ce;
+  --color-vg-text: #292522;
+  --color-vg-muted: #756d65;
+  --color-vg-primary: #292522;
+  --color-vg-secondary: #7c806b;
+  --color-vg-accent: #b96545;
+  --color-vg-success: #68745a;
+  --color-vg-warning: #b28745;
+  --color-vg-error: #a65345;
+}
+
+body {
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

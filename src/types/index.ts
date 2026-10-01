@@ -12,6 +12,7 @@ export interface Product {
   imageUrl?: string;
   categoryId: number;
   available: boolean;
+  isVegetarian?: boolean;
 }
 
 export interface CartItem {
