@@ -100,7 +100,7 @@ function App() {
   return (
     <div className="min-h-screen bg-vg-bg text-vg-text">
       {/* Header editorial */}
-      <header className="border-b border-vg-border bg-vg-bg/95 backdrop-blur-sm sticky top-0 z-30">
+      <header className="border-b border-vg-border bg-vg-surface/95 backdrop-blur-sm sticky top-0 z-30">
         <div className="max-w-4xl mx-auto px-6 py-5">
           <div className="flex items-center justify-between">
             <div className="w-10 flex-shrink-0">
@@ -173,14 +173,14 @@ function App() {
             <br />
             <span className="text-vg-accent">grandi sapori.</span>
           </h2>
-          <p className="text-vg-muted text-sm sm:text-base leading-relaxed max-w-xl">
+          <p className="text-vg-muted text-base leading-relaxed max-w-xl">
             Pizza e pane artigianali, preparati ogni giorno con farine
             selezionate e ingredienti di qualità.
           </p>
         </section>
 
         {/* Tabs de categorias editorial */}
-        <nav className="py-6 border-b border-vg-border bg-vg-surface-muted/30 -mx-6 px-6">
+        <nav className="py-6 px-6 border-b border-vg-border bg-vg-surface-muted/60">
           <div className="flex gap-6 overflow-x-auto pb-1 -mb-1 scrollbar-hide">
             {allCategories.map((cat) => {
               const isActive = selectedCategory === cat.id;
@@ -205,7 +205,7 @@ function App() {
         </nav>
 
         {/* Lista de produtos */}
-        <section>
+        <section className="pt-2">
           {filteredProducts.length === 0 ? (
             <p className="text-center text-vg-muted py-16 text-sm">
               Nessun prodotto in questa categoria.
