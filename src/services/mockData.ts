@@ -4,7 +4,7 @@ export const mockBusiness: Business = {
   id: 1,
   name: "Via del Grano",
   slug: "via-del-grano",
-  whatsappNumber: "+39 333 1234567",
+  whatsappNumber: "+39 000 0000000",
   address: "Via Roma, 42 - Milano",
   openingHours: "Lun-Dom · 7:00 - 22:00",
 };
