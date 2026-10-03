@@ -116,7 +116,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-vg-bg text-vg-text">
-      {/* Header espresso */}
+      {/* Espresso header */}
       <header className="bg-[#292522] border-b border-vg-ocre/20 sticky top-0 z-30 shadow-md shadow-black/10">
         <div className="max-w-4xl mx-auto px-6 py-5">
           <div className="flex items-center justify-between">
@@ -180,7 +180,7 @@ function App() {
       </header>
 
       <main className="max-w-4xl mx-auto px-6 pb-32">
-        {/* Hero editorial */}
+        {/* Editorial hero */}
         <section className="py-12 sm:py-16 border-b border-vg-border">
           <p className="text-[11px] tracking-[0.25em] text-vg-muted uppercase mb-6">
             Il nostro menu
@@ -196,7 +196,7 @@ function App() {
           </p>
         </section>
 
-        {/* Tabs de categorias editorial */}
+        {/* Editorial category tabs */}
         <nav className="py-6 px-6 border-b border-vg-border bg-vg-surface-muted/60">
           <div className="flex gap-6 overflow-x-auto pb-1 -mb-1 scrollbar-hide">
             {allCategories.map((cat) => {
@@ -221,7 +221,7 @@ function App() {
           </div>
         </nav>
 
-        {/* Lista de produtos */}
+        {/* Product list */}
         <section className="pt-2">
           {filteredProducts.length === 0 ? (
             <p className="text-center text-vg-muted py-16 text-sm">
@@ -241,7 +241,7 @@ function App() {
         </section>
       </main>
 
-      {/* Footer editorial */}
+      {/* Editorial footer */}
       <footer className="border-t border-vg-border bg-vg-surface">
         <div className="max-w-4xl mx-auto px-6 py-10">
           <div className="text-center">
@@ -268,7 +268,7 @@ function App() {
         </div>
       </footer>
 
-      {/* Bottom bar do carrinho */}
+      {/* Cart bottom bar */}
       {totalItems > 0 && !isCartOpen && (
         <div className="fixed bottom-0 left-0 right-0 bg-vg-surface border-t border-vg-border z-20">
           <div className="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between gap-4">
