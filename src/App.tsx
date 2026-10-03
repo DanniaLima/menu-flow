@@ -99,13 +99,13 @@ function App() {
 
   return (
     <div className="min-h-screen bg-vg-bg text-vg-text">
-      {/* Header editorial */}
-      <header className="border-b border-vg-border bg-vg-surface/95 backdrop-blur-sm sticky top-0 z-30">
+      {/* Header espresso */}
+      <header className="bg-[#292522] border-b border-vg-ocre/20 sticky top-0 z-30 shadow-md shadow-black/10">
         <div className="max-w-4xl mx-auto px-6 py-5">
           <div className="flex items-center justify-between">
             <div className="w-10 flex-shrink-0">
               <svg
-                className="w-8 h-8 text-vg-secondary"
+                className="w-8 h-8 text-vg-ocre"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
@@ -124,10 +124,10 @@ function App() {
             </div>
 
             <div className="flex-1 text-center">
-              <h1 className="text-lg sm:text-xl font-semibold tracking-[0.3em] text-vg-text uppercase">
+              <h1 className="text-lg sm:text-xl font-semibold tracking-[0.3em] text-vg-bg uppercase">
                 {mockBusiness.name}
               </h1>
-              <p className="text-[10px] tracking-[0.25em] text-vg-muted uppercase mt-1">
+              <p className="text-[10px] tracking-[0.25em] text-vg-ocre uppercase mt-1">
                 Pizza · Pane · Cucina
               </p>
             </div>
@@ -135,11 +135,11 @@ function App() {
             <div className="w-10 flex-shrink-0 flex justify-end">
               <button
                 onClick={() => setIsCartOpen(true)}
-                className="relative border border-vg-border hover:border-vg-text/40 p-2.5 rounded-full transition-all duration-200 focus-visible:outline-2 focus-visible:outline-vg-accent focus-visible:outline-offset-2"
+                className="relative border border-vg-ocre/40 hover:border-vg-ocre p-2.5 rounded-full transition-all duration-200 focus-visible:outline-2 focus-visible:outline-vg-ocre focus-visible:outline-offset-2"
                 aria-label="Apri carrello"
               >
                 <svg
-                  className="w-4 h-4 text-vg-text"
+                  className="w-4 h-4 text-vg-bg"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -152,7 +152,7 @@ function App() {
                   <path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6" />
                 </svg>
                 {totalItems > 0 && (
-                  <span className="absolute -top-1 -right-1 bg-vg-accent text-white text-[10px] font-bold rounded-full w-5 h-5 flex items-center justify-center">
+                  <span className="absolute -top-1 -right-1 bg-vg-ocre text-vg-text text-[10px] font-bold rounded-full w-5 h-5 flex items-center justify-center">
                     {totalItems}
                   </span>
                 )}
@@ -242,7 +242,9 @@ function App() {
               </p>
             </div>
             <p className="text-[11px] text-vg-muted border-t border-vg-border pt-6">
-              © 2026 {mockBusiness.name} · Powered by{" "}
+              © 2026 {mockBusiness.name} · Design by{" "}
+              <span className="text-vg-text font-medium">Dania Lima</span> ·
+              Powered by{" "}
               <span className="text-vg-text font-medium">MenuFlow</span>
             </p>
           </div>
