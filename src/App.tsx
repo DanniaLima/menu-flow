@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ProductRow } from "./components/ProductRow";
 import { CartPanel } from "./components/CartPanel";
 import {
@@ -8,13 +8,26 @@ import {
 } from "./services/mockData";
 import type { Category, CartItem, Product } from "./types";
 
+const CART_STORAGE_KEY = "menu-flow-cart";
+
 function formatPrice(price: number): string {
   return `€ ${price.toFixed(2).replace(".", ",")}`;
 }
 
+function getInitialCart(): CartItem[] {
+  try {
+    const stored = localStorage.getItem(CART_STORAGE_KEY);
+    if (!stored) return [];
+    const parsed = JSON.parse(stored);
+    return Array.isArray(parsed) ? parsed : [];
+  } catch {
+    return [];
+  }
+}
+
 function App() {
   const [selectedCategory, setSelectedCategory] = useState<number | null>(null);
-  const [cart, setCart] = useState<CartItem[]>([]);
+  const [cart, setCart] = useState<CartItem[]>(getInitialCart);
   const [isCartOpen, setIsCartOpen] = useState(false);
 
   const filteredProducts =
@@ -27,6 +40,10 @@ function App() {
     (sum, item) => sum + item.product.price * item.quantity,
     0,
   );
+
+  useEffect(() => {
+    localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(cart));
+  }, [cart]);
 
   const handleAddToCart = (product: Product) => {
     setCart((prev) => {
